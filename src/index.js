@@ -1,1 +1,3 @@
-console.log("happy");
+import setupServer from "./server.js";
+
+setupServer();
