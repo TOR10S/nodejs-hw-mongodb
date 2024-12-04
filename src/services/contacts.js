@@ -35,14 +35,14 @@ export const getAllContacts = async ({page = 1, perPage = 10, sortOrder = SORT_O
     return contact;
   };
 
-  export const createContact = async (payload, userId) => {
-    const contacts = await contactsCollection.create({ ...payload, userId });
+  export const createContact = async (payload) => {
+    const contacts = await contactsCollection.create(payload);
     return contacts;
   };
 
-  export const updateContact = async (contactId, payload, options = {}, userId) => {
+  export const updateContact = async (userId, contactId, payload, options = {}, ) => {
     const rawResult = await contactsCollection.findOneAndUpdate(
-      { _id: contactId, userId },
+      { userId, _id: contactId },
       payload,
       {
         new: true,
