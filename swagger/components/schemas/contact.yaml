@@ -38,6 +38,7 @@ properties:
     type: string
     example: https://res.cloudinary.com/uqwgdu/image/upload/image.png
   userId:
+    description: "id of user contact is owned by"
     type: string
     example: "6759ae347f494f00c7af0416"
 
