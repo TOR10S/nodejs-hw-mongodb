@@ -14,7 +14,7 @@
       "url": "<http://localhost:3000>"
     },
     {
-      "url": "<https://contacts-swagger.onrender.com>"
+      "url": "<https://nodejs-hw-6-u0j2.onrender.com>"
     }
   ],
   "tags": [
@@ -202,7 +202,6 @@
                 "required": [
                   "name",
                   "phoneNumber",
-                  "isFavourite",
                   "contactType"
                 ],
                 "properties": {
@@ -337,6 +336,9 @@
           },
           "401": {
             "$ref": "#/components/responses/401"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
           }
         }
       },
@@ -440,6 +442,9 @@
           },
           "401": {
             "$ref": "#/components/responses/401"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
           }
         }
       },
@@ -481,7 +486,7 @@
                   "properties": {
                     "status": {
                       "type": "integer",
-                      "example": 200
+                      "example": 204
                     },
                     "message": {
                       "type": "string",
@@ -521,8 +526,8 @@
           "name",
           "phoneNumber",
           "email",
-          "isFavourite",
-          "contactType"
+          "contactType",
+          "userId"
         ],
         "properties": {
           "_id": {
@@ -534,6 +539,11 @@
             "description": "contacts name",
             "type": "string",
             "example": "John Doe"
+          },
+          "email": {
+            "description": "user email",
+            "type": "string",
+            "example": "example@gmail.com"
           },
           "phoneNumber": {
             "description": "contacts phoneNumber",
@@ -558,6 +568,10 @@
             "description": "Link to contacts photo",
             "type": "string",
             "example": "https://res.cloudinary.com/uqwgdu/image/upload/image.png"
+          },
+          "userId": {
+            "type": "string",
+            "example": "6759ae347f494f00c7af0416"
           }
         }
       }

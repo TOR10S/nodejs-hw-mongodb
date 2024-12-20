@@ -14,7 +14,7 @@ tags:
     description: Auth operations.
 servers:
   - url: <http://localhost:3000>
-  - url: <https://contacts-swagger.onrender.com>
+  - url: <https://nodejs-hw-6-u0j2.onrender.com>
 paths:
   /contacts:
     get:
