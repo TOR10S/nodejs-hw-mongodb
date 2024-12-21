@@ -9,8 +9,8 @@ import cookieParser from 'cookie-parser';
 import { UPLOAD_DIR } from './constants/index.js';
 import { swaggerDoc } from './middlewares/swaggerDocs.js';
 
-const PORT = Number(env("PORT","3000"));
 
+const PORT = Number(env("PORT","3000"));
 export default function setupServer() {
 const app = express();
 app.use(express.json());
