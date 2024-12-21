@@ -472,7 +472,7 @@
           }
         ],
         "responses": {
-          "200": {
+          "204": {
             "description": "Delete contact by id",
             "content": {
               "application/json": {
@@ -525,7 +525,6 @@
           "_id",
           "name",
           "phoneNumber",
-          "email",
           "contactType",
           "userId"
         ],
