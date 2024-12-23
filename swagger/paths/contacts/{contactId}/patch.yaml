@@ -43,7 +43,7 @@ requestBody:
             type: string
             format: binary
 responses:
-  '201':
+  '200':
     description: Updates a contact
     content:
       application/json:
